@@ -12,9 +12,10 @@
       <!-- CHANGE YOUR NAME -->
       <ul>
         <li><a href="#home">Home</a></li>
-        <li><a href="#home">About</a></li>
+        <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#achievements">Achievements</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -28,10 +29,17 @@
   <div class="home-top">
     <img src="don pic.jpg" alt="Profile Picture" class="profile-pic">
     <h1>Hello, I'm <span>Don Johns</span></h1> <!-- CHANGE NAME -->
-    <p>Engineering Student | Aspiring Developer</p> <!-- CHANGE -->
+    <p>| Engineering Student | Aspiring Developer |</p> <!-- CHANGE -->
+    
+    <div class="profile-summary">
+      <p>
+        Motivated engineering student interested in building real-world projects and
+        continuously improving technical skills.
+      </p>
+    </div>
   </div>
 
-  <div class="home-bottom">
+  <div class="home-bottom" id="about">
     <h2>About Me</h2>
     <ul class="about-list">
       <li><strong>Engineering:</strong> B.Tech CS @ Amal Jyothi (2023–27).</li>
@@ -57,6 +65,18 @@
   </div>
 </section>
 
+<!-- CURRENTLY LEARNING 
+<section class="section">
+  <h2>Currently Learning</h2>
+
+  <ul class="simple-list">
+    <li>Advanced JavaScript concepts</li>
+    <li>Backend development with Python</li>
+    <li>Database fundamentals (MySQL)</li>
+    <li>Problem solving and data structures</li>
+  </ul>
+</section>
+ -->
 <!-- PROJECTS SECTION -->
 <section id="projects" class="section">
   <h2>Projects</h2>
@@ -64,7 +84,7 @@
   <div class="projects-container">
 
     <div class="project-card">
-      <h3><strong>AI Study Planner</strong></h3>
+      <h3><strong> 1) AI Study Planner</strong></h3>
       <p>
         A smart study planner that integrates an AI assistant for instant doubt resolution, automatic quiz generation, and engaging gamification features to enhance your learning experience.
       </p>
@@ -75,6 +95,38 @@
    
 
   </div>
+</section>
+
+<!-- EXPERIENCE 
+<section class="section">
+  <h2>Experience & Activities</h2>
+
+  <div class="experience-item">
+    <h3>Student Projects</h3>
+    <p>
+      Built multiple academic and personal projects focusing on web
+      development, logic building, and clean UI design.
+    </p>
+  </div>
+
+  <div class="experience-item">
+    <h3>Self-Learning & Practice</h3>
+    <p>
+      Regularly practice coding problems, explore new technologies,
+      and improve development workflow using Git and GitHub.
+    </p>
+  </div>
+</section>
+ -->
+<!-- ACHIEVEMENTS -->
+<section id="achievements" class="section">
+  <h2>Achievements & Certifications</h2>
+
+  <ul class="simple-list">
+    <li>Completed online courses in python programming.</li>
+    <li>Actively building and maintaining GitHub projects.</li>
+    <li>Did an internship in app development using flutter.</li>
+  </ul>
 </section>
 
 <!-- CONTACT SECTION -->
@@ -93,6 +145,10 @@
   <p>LinkedIn: <a href="www.linkedin.com/in/donjohns123" target="_blank">
     linkedin.com/in/donjohns123</a></p>
 </section>
+
+<footer class="footer">
+  <p>© 2026 Don Johns. All rights reserved.</p>
+</footer>
 
     <script src="script.js"></script>
   </body>

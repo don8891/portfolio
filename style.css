@@ -3,7 +3,7 @@
   --bg-card: #1e293b;      /* card background */
   --text-main: #e5e7eb;    /* main text */
   --text-muted: #9ca3af;   /* muted text */
-  --accent: #38bdf8;       /* blue accent */
+  --accent: #2dd4bf;       /* Teal accent */
 }
 
 body {
@@ -17,7 +17,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 80px;
+  padding: 15px 40px; /* Reduced padding */
   background: #020617;
   position: sticky;
   top: 0;
@@ -26,30 +26,24 @@ nav {
 
 nav h2 {
   color: var(--accent);
+  margin: 0;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 20px; /* Reduced gap */
 }
 
-nav a {
-  color: var(--text-main);
-  text-decoration: none;
-  font-weight: 500;
-}
-
-nav a:hover {
-  color: var(--accent);
-}
+/* ... (keep body styles) ... */
 
 .home-section {
-  height: 100vh;
+  min-height: 80vh; /* Changed from fixed 100vh to allow flexibility */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 100px 120px;
+  justify-content: center; /* keep centered */
+  padding: 60px 40px; /* Reduced padding */
+  gap: 30px; /* Reduced gap */
 }
 
 .home-top {
@@ -57,19 +51,24 @@ nav a:hover {
 }
 
 .profile-pic {
-  width: 150px;
-  height: 150px;
+  width: 240px; /* Significantly larger */
+  height: 240px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  border: 4px solid var(--bg-card);
+  margin-bottom: 25px;
+  box-shadow: 0 0 20px rgba(45, 212, 191, 0.2); /* Subtle teal glow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 6px solid var(--bg-card); /* Thicker border */
+}
+
+.profile-pic:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 0 35px rgba(45, 212, 191, 0.5); /* Intense glow */
 }
 
 .home-top h1 {
-  font-size: 48px;
-  margin-bottom: 10px;
+  font-size: 2.5rem; /* Reduced from 48px/3rem */
+  margin: 0 0 10px 0;
 }
 
 .home-top span {
@@ -77,33 +76,35 @@ nav a:hover {
 }
 
 .home-top p {
-  font-size: 18px;
+  font-size: 16px; /* Reduced font size */
   color: var(--text-muted);
+  margin: 5px 0 0 0;
 }
 
 .home-bottom {
   max-width: 650px;
+  margin-top: 20px;
 }
 
 .home-bottom h2 {
   color: var(--accent);
   margin-bottom: 10px;
-  font-size: 1.5rem; /* Copied from previous but adapted if needed */
+  font-size: 1.3rem; 
 }
 
 .home-bottom p {
   color: var(--text-muted);
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
 .section {
-  padding: 100px 120px;
+  padding: 50px 40px; /* Reduced padding */
 }
 
 .section h2 {
-  font-size: 34px;
+  font-size: 28px; /* Reduced font size */
   color: var(--accent);
-  margin-bottom: 30px;
+  margin-bottom: 20px; /* Reduced margin */
   text-align: center;
 }
 
@@ -209,4 +210,59 @@ nav a:hover {
   position: absolute;
   left: 0;
   font-size: 1.2em;
+}
+
+.profile-summary {
+  max-width: 700px;
+  margin: 15px auto 0; /* Centered with margin-top */
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.simple-list {
+  max-width: 600px;
+  margin: 0 auto; /* Centered */
+  list-style: none; /* Removing default bullets if intended, or keep default? User didn't specify list-style: none in their CSS but usually "simple-list" implies clean. I will assume default bullets or none? The user's provided CSS for simple-list didn't include list-style. I'll stick to their CSS exactly but maybe add list-style check. Let's stick to provided CSS + margin auto for centering since .section has text-align center usually? No, section h2 is center. I'll stick to provided CSS. */
+}
+
+.simple-list li {
+  margin-bottom: 12px;
+  color: var(--text-muted);
+  padding-left: 20px;
+  position: relative;
+  text-align: left; /* Ensure list items are left-aligned even if parent is centered */
+}
+
+.simple-list li::before {
+  content: "•";
+  color: var(--accent);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  font-size: 1.2em;
+}
+
+.experience-item {
+  margin-bottom: 25px;
+  text-align: center; /* Center align content in experience items */
+}
+
+.experience-item h3 {
+  color: var(--accent);
+  margin-bottom: 8px;
+  margin-top: 0;
+}
+
+.experience-item p {
+  color: var(--text-muted);
+  max-width: 700px;
+  margin: 0 auto; /* Center the paragraphs */
+}
+
+.footer {
+  text-align: center;
+  padding: 30px;
+  background: #020617;
+  color: var(--text-muted);
+  border-top: 1px solid rgba(255,255,255,0.05);
 }
