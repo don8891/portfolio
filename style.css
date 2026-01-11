@@ -22,12 +22,24 @@ nav a {
   text-decoration: none;
 }
 
-#home {
+.home-section {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  padding: 80px 100px;
+}
+
+.home-top h1 {
+  font-size: 42px;
+}
+
+.home-top span {
+  color: #007bff;
+}
+
+.home-bottom {
+  max-width: 600px;
 }
 .section {
   padding: 70px 100px;
@@ -49,4 +61,24 @@ nav a {
 
 .education li {
   margin-bottom: 15px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.skill-card {
+  padding: 20px;
+  background: #f1f1f1;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
 }
