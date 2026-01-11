@@ -29,3 +29,24 @@ nav a {
   justify-content: center;
   align-items: center;
 }
+.section {
+  padding: 70px 100px;
+}
+
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.section p {
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+.education {
+  margin-top: 20px;
+}
+
+.education li {
+  margin-bottom: 15px;
+}
