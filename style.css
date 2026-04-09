@@ -40,25 +40,34 @@ body {
 /* BACKGROUND EFFECTS */
 .bg-glow {
   position: absolute;
-  width: 60vw;
-  height: 60vw;
+  top: 50%;
+  left: 50%;
+  width: 150vw;
+  height: 150vh;
+  margin-top: -75vh;
+  margin-left: -75vw;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0%,
+    rgba(0, 229, 255, 0.25) 25%,
+    transparent 50%,
+    rgba(94, 23, 235, 0.25) 75%,
+    transparent 100%
+  );
   border-radius: 50%;
-  filter: blur(140px);
+  filter: blur(120px) drop-shadow(0 0 100px rgba(0,229,255,0.1));
   z-index: -1;
-  opacity: 0.15;
   pointer-events: none;
-}
-
-.bg-glow-1 {
-  background: radial-gradient(circle, #5E17EB, transparent 70%);
-  top: -10%;
-  right: -10%;
+  animation: rotateNebula 25s linear infinite;
 }
 
 .bg-glow-2 {
-  background: radial-gradient(circle, var(--accent), transparent 70%);
-  bottom: 20%;
-  left: -20%;
+  display: none;
+}
+
+@keyframes rotateNebula {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 .stars-overlay {
@@ -73,8 +82,14 @@ body {
     radial-gradient(2px 2px at 90px 40px, #ffffff, rgba(0, 0, 0, 0));
   background-repeat: repeat;
   background-size: 150px 150px;
-  opacity: 0.1;
+  opacity: 0.2;
   z-index: -2;
+  animation: scrollStars 90s linear infinite;
+}
+
+@keyframes scrollStars {
+  from { background-position: 0 0; }
+  to { background-position: -300px -300px; }
 }
 
 .accent {
