@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Don Johns | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Using FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Glow Background Elements -->
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+  <!-- Stars wrapper -->
+  <div class="stars-overlay"></div>
+
+  <!-- NAVBAR -->
+  <nav>
+    <a href="#home" class="logo">Don<span class="accent">Johns</span></a>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="social-nav">
+      <a href="https://github.com/don8891" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/donjohns123" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a href="mailto:donjohns876@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+  </nav>
+
+  <!-- HOME SECTION -->
+  <section id="home" class="home-section">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">Don Johns</h1>
+        <h2 class="hero-subtitle"><span class="accent">Cybersecurity</span> & <br/> Full Stack Developer</h2>
+        <p class="hero-desc">
+          Engineering student passionate about <strong>infrastructure security, ethical hacking</strong>, 
+          and <strong>software engineering</strong>. I love discovering vulnerabilities, writing secure code, 
+          and building efficient, scalable applications.
+        </p>
+        <div class="hero-btns">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-secondary">Contact Me</a>
+        </div>
+      </div>
+      <div class="hero-image-wrapper">
+        <img src="images/profile.jpg" alt="Don Johns Profile" class="hero-profile-img">
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <a href="#about"><i class="fas fa-arrow-down"></i></a>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">About <span class="accent">Me</span></h2>
+      
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I am a B.Tech Computer Science student at Amal Jyothi College of Engineering with an intense enthusiasm for 
+            <span class="accent">Cybersecurity</span>, <span class="accent">Ethical Hacking</span>, and building robust software solutions.
+          </p>
+          <p>
+            My goal is to dive deep into network security, vulnerability assessments, and penetration testing, while leveraging my 
+            skills in Full Stack Development to craft secure, modern applications. From configuring firewalls to designing AI-driven tools,
+            I am driven by complex problem-solving.
+          </p>
+          <p>
+            I am currently exploring penetration testing tools (like Metasploit and Nmap), advanced Python scripting, 
+            and modern web architectures to ensure the systems of tomorrow remain impenetrable.
+          </p>
+          <a href="#" class="btn btn-primary mt-4"><i class="fas fa-file-pdf"></i> Download Resume</a>
+        </div>
+
+        <div class="about-education">
+          <h3 class="education-title">Education</h3>
+          <div class="edu-card">
+            <h4>B.Tech in Computer Science and Engineering</h4>
+            <p class="edu-school">Amal Jyothi College of Engineering, Kanjirappally</p>
+            <p class="edu-year">2023 - 2027</p>
+            <p class="edu-details">Core member of Blankspace Community.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section id="skills" class="section">
+    <div class="container">
+      <h2 class="section-title"><span class="accent">My</span> Skills</h2>
+      
+      <div class="skills-grid">
+        <!-- Cybersecurity related -->
+        <div class="skill-card">Kali Linux</div>
+        <div class="skill-card">Network Security</div>
+        <div class="skill-card">Penetration Testing</div>
+        <div class="skill-card">Wireshark & Nmap</div>
+        
+        <!-- Dev related (existing) -->
+        <div class="skill-card">Python</div>
+        <div class="skill-card">Java</div>
+        <div class="skill-card">SQL / MySQL</div>
+        <div class="skill-card">Git & GitHub</div>
+        <div class="skill-card">React & Flask</div>
+        <div class="skill-card">HTML/CSS</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title">My <span class="accent">Projects</span></h2>
+      <p class="section-subtitle">A showcase of my work in <strong>Full Stack Development</strong> and exploring <strong>Security implementations</strong>.</p>
+      
+      <div class="filter-controls">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web Dev</button>
+        <button class="filter-btn" data-filter="security">Security</button>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- User's Actual Project -->
+        <div class="project-card" data-category="web ai">
+          <div class="project-cover ai-cover">
+            <i class="fas fa-robot project-icon"></i>
+          </div>
+          <div class="project-content">
+            <h3>AI Study Planner</h3>
+            <p class="project-desc">A smart study planner that integrates an AI assistant for doubt resolution, quiz generation, and gamification to enhance learning.</p>
+            <p class="project-tech">React / Flask / MySQL / OpenAI</p>
+            <a href="https://github.com/don8891/AI-Study-Planner" target="_blank" class="project-link">
+              Read More <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title text-center">Let's <span class="accent">Connect</span></h2>
+      <p class="text-center contact-subtitle">Whether you want to discuss cybersecurity, collaborate on a project, or just say hello, feel free to reach out!</p>
+      
+      <div class="contact-grid">
+        <div class="contact-card">
+          <i class="far fa-envelope contact-icon"></i>
+          <h4>Email</h4>
+          <a href="mailto:donjohns876@gmail.com">donjohns876@gmail.com</a>
+        </div>
+        <div class="contact-card">
+          <i class="fas fa-phone-alt contact-icon"></i>
+          <h4>Phone</h4>
+          <a href="tel:+918891554693">+91 8891554693</a>
+        </div>
+        <div class="contact-card">
+          <i class="fas fa-map-marker-alt contact-icon"></i>
+          <h4>Location</h4>
+          <p>Kerala, India</p>
+        </div>
+      </div>
+
+      <div class="find-me">
+        <h4>Find me on</h4>
+        <div class="social-circles">
+          <a href="https://github.com/don8891" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/donjohns123" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-left">
+        <h3><span class="accent">Don</span> Johns</h3>
+        <p>Cybersecurity & Full Stack Developer</p>
+      </div>
+      <div class="footer-right">
+        <a href="#home" class="scroll-top-btn"><i class="fas fa-arrow-up"></i> Back to Top</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Don Johns. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
