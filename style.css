@@ -721,22 +721,34 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .nav-links {
-    display: none;
+  nav .container {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
   }
 
-  /* hamburger logic usually goes here */
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .social-nav {
+    display: none; /* Hide social icons in nav on small screens, footer will have them */
+  }
+
   .hero-title {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
 
   .hero-subtitle {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 
   .hero-profile-img {
-    width: 250px;
-    height: 250px;
+    width: 220px;
+    height: 220px;
   }
 
   .footer-content,
@@ -747,6 +759,12 @@ footer {
   }
 
   .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-grid {
     grid-template-columns: 1fr;
   }
 }
