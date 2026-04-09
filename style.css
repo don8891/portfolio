@@ -2,17 +2,17 @@
   DARK SPACE THEME OVERHAUL
 */
 :root {
-  --bg-dark: #07090F;
-  /* Deep dark background */
-  --bg-card: #121826;
-  /* Card background */
-  --bg-card-hover: #1A2235;
-  --accent: #00E5FF;
-  /* Cyan glowing accent */
-  --accent-glow: rgba(0, 229, 255, 0.4);
-  --text-main: #F8FAFC;
+  --bg-dark: #0A192F;
+  /* Deep dark navy background */
+  --bg-card: #112240;
+  /* Navy Card background */
+  --bg-card-hover: #233554;
+  --accent: #64FFDA;
+  /* Soft teal/cyan accent */
+  --accent-glow: rgba(100, 255, 218, 0.2);
+  --text-main: #CCD6F6;
   /* Pure white/light grey text */
-  --text-muted: #94A3B8;
+  --text-muted: #8892B0;
   /* Subtitle text */
 
   --font-main: 'Inter', sans-serif;
@@ -49,13 +49,13 @@ body {
   background: conic-gradient(
     from 0deg,
     transparent 0%,
-    rgba(0, 229, 255, 0.25) 25%,
+    rgba(100, 255, 218, 0.15) 25%,
     transparent 50%,
-    rgba(94, 23, 235, 0.25) 75%,
+    rgba(35, 53, 84, 0.4) 75%,
     transparent 100%
   );
   border-radius: 50%;
-  filter: blur(120px) drop-shadow(0 0 100px rgba(0,229,255,0.1));
+  filter: blur(120px) drop-shadow(0 0 100px rgba(100, 255, 218, 0.05));
   z-index: -1;
   pointer-events: none;
   animation: rotateNebula 25s linear infinite;
