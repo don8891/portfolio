@@ -38,3 +38,15 @@ filterBtns.forEach(btn => {
     });
   });
 });
+
+// Hide logo on down scroll
+const navLogo = document.querySelector('.logo');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 80) {
+    navLogo.style.opacity = '0';
+    navLogo.style.pointerEvents = 'none';
+  } else {
+    navLogo.style.opacity = '1';
+    navLogo.style.pointerEvents = 'auto';
+  }
+});
