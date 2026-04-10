@@ -3,13 +3,13 @@
 */
 :root {
   --bg-dark: #000000;
-  /* Deep dark black background */
-  --bg-card: rgba(255, 255, 255, 0.05);
-  /* Glass card background */
-  --bg-card-hover: rgba(255, 255, 255, 0.09);
-  --accent: #64FFDA;
-  /* Soft teal/cyan accent */
-  --accent-glow: rgba(100, 255, 218, 0.2);
+  /* Pitch black space background */
+  --bg-card: rgba(15, 15, 18, 0.6);
+  /* Sleek professional transparent glass */
+  --bg-card-hover: rgba(30, 30, 36, 0.7);
+  --accent: #FFB703;
+  /* Amber/Gold accent to match city lights */
+  --accent-glow: rgba(255, 183, 3, 0.3);
   --text-main: #CCD6F6;
   /* Pure white/light grey text */
   --text-muted: #8892B0;
@@ -37,58 +37,35 @@ body {
   line-height: 1.6;
 }
 
-/* AURORA BACKGROUND EFFECTS */
-.aurora-bg {
+/* EARTH BACKGROUND WITH 3D ZOOM EFFECT */
+.earth-bg {
+  position: fixed;
+  top: -5%;
+  left: -5%;
+  width: 110vw;
+  height: 110vh;
+  z-index: -4;
+  background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2600&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center 80%;
+  background-repeat: no-repeat;
+  animation: slowOrbit 30s infinite alternate ease-in-out;
+}
+
+@keyframes slowOrbit {
+  0% { transform: scale(1) translateY(0) rotate(0deg); }
+  100% { transform: scale(1.06) translateY(-2%) rotate(1deg); }
+}
+
+.earth-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   z-index: -3;
-  overflow: hidden;
-  background: #000;
-}
-
-.aurora-blob {
-  position: absolute;
-  filter: blur(130px);
-  border-radius: 50%;
-  opacity: 0.7;
-  animation: moveAurora 15s infinite alternate ease-in-out;
-}
-
-.aurora-1 {
-  width: 60vw;
-  height: 60vw;
-  background: radial-gradient(circle, rgba(100,255,218,0.5) 0%, rgba(0,0,0,0) 70%);
-  bottom: -20%;
-  left: -20%;
-  animation-duration: 20s;
-}
-
-.aurora-2 {
-  width: 60vw;
-  height: 60vw;
-  background: radial-gradient(circle, rgba(168,85,247,0.5) 0%, rgba(0,0,0,0) 70%);
-  bottom: -10%;
-  right: -10%;
-  animation-duration: 18s;
-  animation-direction: alternate-reverse;
-}
-
-.aurora-3 {
-  width: 50vw;
-  height: 50vw;
-  background: radial-gradient(circle, rgba(59,130,246,0.5) 0%, rgba(0,0,0,0) 70%);
-  top: -10%;
-  left: 10%;
-  animation-duration: 25s;
-}
-
-@keyframes moveAurora {
-  0% { transform: translateY(0) scale(1); }
-  50% { transform: translateY(-70px) scale(1.1); }
-  100% { transform: translateY(40px) scale(0.9); }
+  /* Keeps contrast high and UI clean so it is not overblue */
+  background: linear-gradient(to bottom, rgba(5, 5, 8, 0.45) 0%, rgba(2, 2, 4, 0.85) 100%);
 }
 
 /* GLASSMORPHISM CARDS */
