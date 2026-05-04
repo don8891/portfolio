@@ -50,3 +50,36 @@ window.addEventListener('scroll', () => {
     navLogo.style.pointerEvents = 'auto';
   }
 });
+
+// Contact Form Modal Logic
+const successModal = document.getElementById('success-modal');
+const closeModalBtn = document.querySelector('.close-modal');
+const modalCloseBtn = document.querySelector('.modal-close-btn');
+
+function handleFormSubmit(event, form) {
+  // Prevent default logic is not strictly needed because target="hidden_iframe"
+  // but we can show the modal immediately
+  successModal.style.display = 'flex';
+  
+  // Reset the form after a short delay
+  setTimeout(() => {
+    form.reset();
+  }, 500);
+}
+
+// Close modal when X is clicked
+closeModalBtn.addEventListener('click', () => {
+  successModal.style.display = 'none';
+});
+
+// Close modal when Awesome button is clicked
+modalCloseBtn.addEventListener('click', () => {
+  successModal.style.display = 'none';
+});
+
+// Close modal if user clicks outside of it
+window.addEventListener('click', (e) => {
+  if (e.target === successModal) {
+    successModal.style.display = 'none';
+  }
+});
