@@ -7,9 +7,17 @@
   <link rel="stylesheet" href="style.css" />
   <!-- Using FontAwesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+
+  <!-- Background Glassmorphic Blobs -->
+  <div class="blob-wrapper">
+    <div class="bg-blob blob-1"></div>
+    <div class="bg-blob blob-2"></div>
+    <div class="bg-blob blob-3"></div>
+    <div class="bg-blob blob-4"></div>
+  </div>
 
   <!-- Three.js 3D Background Canvas -->
   <canvas id="three-canvas"></canvas>
@@ -33,20 +41,22 @@
 
   <!-- HOME SECTION -->
   <section id="home" class="home-section">
-    <div class="container hero-content">
-      <div class="hero-text">
-        <h1 class="hero-title">Don Johns</h1>
-        <h2 class="hero-subtitle"><span class="accent">Full Stack Developer</span></h2>
-        <p class="hero-desc">
-          Engineering student passionate about <strong>full stack development</strong> and <strong>software engineering</strong>, with a strong interest in <strong>data analytics</strong>. I love building secure, efficient applications, extracting insights from data, and developing scalable web solutions.
-        </p>
-        <div class="hero-btns">
-          <a href="#projects" class="btn btn-primary">View My Work</a>
-          <a href="#contact" class="btn btn-secondary">Contact Me</a>
+    <div class="container">
+      <div class="hero-card">
+        <div class="hero-text">
+          <h1 class="hero-title">Don Johns</h1>
+          <h2 class="hero-subtitle"><span class="accent">Full Stack Developer</span></h2>
+          <p class="hero-desc">
+            Engineering student passionate about <strong>full stack development</strong> and <strong>software engineering</strong>, with a strong interest in <strong>data analytics</strong>. I love building secure, efficient applications, extracting insights from data, and developing scalable web solutions.
+          </p>
+          <div class="hero-btns">
+            <a href="#projects" class="btn btn-primary">View My Work</a>
+            <a href="#contact" class="btn btn-secondary">Contact Me</a>
+          </div>
         </div>
-      </div>
-      <div class="hero-image-wrapper">
-        <img src="images/profile.jpg" alt="Don Johns Profile" class="hero-profile-img">
+        <div class="hero-image-wrapper">
+          <img src="images/profile.jpg" alt="Don Johns Profile" class="hero-profile-img">
+        </div>
       </div>
     </div>
     <div class="scroll-indicator">

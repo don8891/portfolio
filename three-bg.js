@@ -49,9 +49,9 @@
   const nebulaPos = new Float32Array(nebulaCount * 3);
   const nebulaColors = new Float32Array(nebulaCount * 3);
 
-  const amber = new THREE.Color(0xFFB703);
-  const deepBlue = new THREE.Color(0x0a1628);
-  const gold = new THREE.Color(0xf59e0b);
+  const crimson = new THREE.Color(0xFF3B30);
+  const deepRose = new THREE.Color(0x2B0C16);
+  const gold = new THREE.Color(0xFF9500);
 
   for (let i = 0; i < nebulaCount; i++) {
     const r = 60 + Math.random() * 80;
@@ -62,7 +62,7 @@
     nebulaPos[i * 3 + 2] = r * Math.cos(phi);
 
     const mix = Math.random();
-    const col = mix > 0.5 ? amber.clone().lerp(gold, Math.random()) : deepBlue.clone().lerp(amber, Math.random() * 0.4);
+    const col = mix > 0.5 ? crimson.clone().lerp(gold, Math.random() * 0.5) : deepRose.clone().lerp(crimson, Math.random() * 0.4);
     nebulaColors[i * 3]     = col.r;
     nebulaColors[i * 3 + 1] = col.g;
     nebulaColors[i * 3 + 2] = col.b;
@@ -90,7 +90,7 @@
   const nodeMeshes = [];
 
   const nodeGeo = new THREE.SphereGeometry(0.35, 8, 8);
-  const nodeMat = new THREE.MeshBasicMaterial({ color: 0xFFB703, transparent: true, opacity: 0.9 });
+  const nodeMat = new THREE.MeshBasicMaterial({ color: 0xFF3B30, transparent: true, opacity: 0.9 });
   const smallNodeMat = new THREE.MeshBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.4 });
 
   for (let i = 0; i < nodeCount; i++) {
@@ -111,7 +111,7 @@
 
   // ─── Connection Lines between nearby nodes ──────────────────────────────────
   const lineMat = new THREE.LineBasicMaterial({
-    color: 0xFFB703,
+    color: 0xFF3B30,
     transparent: true,
     opacity: 0.12,
     blending: THREE.AdditiveBlending,
