@@ -87,6 +87,7 @@ document.querySelectorAll('.project-card').forEach(card => {
     const desc = card.getAttribute('data-desc');
     const tech = card.getAttribute('data-tech');
     const github = card.getAttribute('data-github');
+    const live = card.getAttribute('data-live');
     const image = card.getAttribute('data-image');
 
     document.getElementById('modal-project-title').innerText = title;
@@ -95,6 +96,15 @@ document.querySelectorAll('.project-card').forEach(card => {
     document.getElementById('modal-project-link').setAttribute('href', github);
     document.getElementById('modal-project-img').setAttribute('src', image);
     document.getElementById('modal-project-img').setAttribute('alt', title + ' Preview');
+
+    // Handle live link (show or hide the button)
+    const liveLinkEl = document.getElementById('modal-live-link');
+    if (live) {
+      liveLinkEl.setAttribute('href', live);
+      liveLinkEl.style.display = 'inline-flex';
+    } else {
+      liveLinkEl.style.display = 'none';
+    }
 
     projectModal.style.display = 'flex';
   });

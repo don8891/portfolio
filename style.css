@@ -1026,6 +1026,9 @@ textarea.form-control {
 }
 
 .project-modal-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
   margin-top: auto;
   padding-top: 0.5rem;
 }
