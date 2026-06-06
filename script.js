@@ -77,9 +77,40 @@ modalCloseBtn.addEventListener('click', () => {
   successModal.style.display = 'none';
 });
 
-// Close modal if user clicks outside of it
+// Project Modal Logic
+const projectModal = document.getElementById('project-modal');
+const closeProjectModalBtn = document.querySelector('.close-project-modal');
+
+document.querySelectorAll('.project-card').forEach(card => {
+  card.addEventListener('click', () => {
+    const title = card.getAttribute('data-title');
+    const desc = card.getAttribute('data-desc');
+    const tech = card.getAttribute('data-tech');
+    const github = card.getAttribute('data-github');
+    const image = card.getAttribute('data-image');
+
+    document.getElementById('modal-project-title').innerText = title;
+    document.getElementById('modal-project-desc').innerText = desc;
+    document.getElementById('modal-project-tech').innerText = tech;
+    document.getElementById('modal-project-link').setAttribute('href', github);
+    document.getElementById('modal-project-img').setAttribute('src', image);
+    document.getElementById('modal-project-img').setAttribute('alt', title + ' Preview');
+
+    projectModal.style.display = 'flex';
+  });
+});
+
+closeProjectModalBtn.addEventListener('click', () => {
+  projectModal.style.display = 'none';
+});
+
+// Close modals if user clicks outside of them
 window.addEventListener('click', (e) => {
   if (e.target === successModal) {
     successModal.style.display = 'none';
   }
+  if (e.target === projectModal) {
+    projectModal.style.display = 'none';
+  }
 });
+

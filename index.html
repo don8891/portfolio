@@ -144,17 +144,18 @@
       <div class="projects-grid">
 
         <!-- User's Actual Project -->
-        <div class="project-card" data-category="web ai">
+        <div class="project-card" data-category="web ai"
+             data-title="AI Study Planner"
+             data-desc="A smart study planner that integrates an AI assistant for doubt resolution, quiz generation, and gamification to enhance learning."
+             data-tech="React / Flask / MySQL / OpenAI"
+             data-github="https://github.com/don8891/AI-Study-Planner"
+             data-image="images/study-flow.png">
           <div class="project-cover ai-cover">
             <i class="fas fa-robot project-icon"></i>
           </div>
           <div class="project-content">
             <h3>AI Study Planner</h3>
-            <p class="project-desc">A smart study planner that integrates an AI assistant for doubt resolution, quiz generation, and gamification to enhance learning.</p>
-            <p class="project-tech">React / Flask / MySQL / OpenAI</p>
-            <a href="https://github.com/don8891/AI-Study-Planner" target="_blank" class="project-link">
-              Read More <i class="fas fa-arrow-right"></i>
-            </a>
+            <span class="project-expand-link">Read More <i class="fas fa-arrow-right"></i></span>
           </div>
         </div>
 
@@ -211,6 +212,33 @@
           <h3>Awesome!</h3>
           <p>Your message has been successfully sent. I will get back to you shortly.</p>
           <button class="btn btn-primary modal-close-btn">Close</button>
+        </div>
+      </div>
+
+      <!-- PROJECT DETAIL MODAL -->
+      <div id="project-modal" class="modal">
+        <div class="modal-content project-modal-content">
+          <span class="close-project-modal">&times;</span>
+          <h2 id="modal-project-title" class="accent"></h2>
+          
+          <div class="project-modal-body">
+            <div class="project-modal-image-wrapper">
+              <img id="modal-project-img" src="" alt="Project Preview" class="project-modal-img">
+            </div>
+            
+            <div class="project-modal-info">
+              <p id="modal-project-desc" class="project-modal-desc"></p>
+              <div class="project-modal-meta">
+                <strong>Technologies:</strong>
+                <span id="modal-project-tech" class="project-tech-tags"></span>
+              </div>
+              <div class="project-modal-links">
+                <a id="modal-project-link" href="" target="_blank" class="btn btn-primary">
+                  <i class="fab fa-github"></i> View Repository
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
